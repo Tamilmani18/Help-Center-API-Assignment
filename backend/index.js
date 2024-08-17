@@ -2,16 +2,9 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
-
-import CardRoute from './routes/CardRoute.js'
-
 dotenv.config();
 
-const app = express();
-const port = process.env.PORT || 3000;
-
-app.use(cors());
-app.use(express.json());
+import CardRoute from "./routes/CardRoute.js";
 
 mongoose
   .connect(process.env.MONGODB_URL)
@@ -22,8 +15,18 @@ mongoose
     console.error("MongoDB connection error:", error);
   });
 
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.use(cors());
+app.use(express.json());
+
+app.get("/ping", (req, res) => {
+  res.send({ message: "Health ok!!" });
+});
+
 // default route path
-app.use("/",CardRoute)
+app.use("/", CardRoute);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);

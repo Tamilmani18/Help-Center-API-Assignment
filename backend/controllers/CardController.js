@@ -1,9 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-import Card from "../models/Card";
-
-const cards = (req, res) => {
-  res.send("Server is running");
-};
+import Card from "../models/Card.js"; 
 
 const createCard = async (req, res) => {
   try {
@@ -38,7 +34,6 @@ const getSpecificCard = async (req, res) => {
 };
 
 export default {
-  cards,
   getCards,
   getSpecificCard,
   createCard,
