@@ -1,9 +1,17 @@
 import { v4 as uuidv4 } from "uuid";
-import Card from "../models/Card.js"; 
+import Card from "../models/Card.js";
 
 const createCard = async (req, res) => {
   try {
     const { title, description } = req.body;
+
+    const existingCard = await Card.findOne({ title });
+    if (existingCard) {
+      return res
+        .status(409)
+        .json({ error: "Card with this title already exists" });
+    }
+
     const card = new Card({ title, description, id: uuidv4() });
     await card.save();
     res.status(201).json(card);

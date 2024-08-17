@@ -9,14 +9,14 @@ import CardRoute from "./routes/CardRoute.js";
 mongoose
   .connect(process.env.MONGODB_URL)
   .then(() => {
-    console.log("Connected to MongoDB");
+    console.log("Connected to Database");
   })
   .catch((error) => {
     console.error("MongoDB connection error:", error);
   });
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 7000;
 
 app.use(cors());
 app.use(express.json());

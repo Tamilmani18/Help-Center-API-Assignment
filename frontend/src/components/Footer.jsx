@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="bg-black text-white p-8 mt-16">
       <div className="max-w-6xl mx-auto grid grid-cols-4 gap-4">
         <div>
-          <h3 className="font-semibold">Abstract</h3>
+          <h3 className="font-bold text-xl mb-2">Abstract</h3>
           <ul>
             <li>
               <a href="#">Branches</a>
@@ -13,7 +13,7 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <h3 className="font-semibold">Resources</h3>
+          <h3 className="font-bold text-xl mb-2">Resources</h3>
           <ul>
             <li>
               <a href="#">Blog</a>
@@ -30,7 +30,7 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <h3 className="font-semibold">Community</h3>
+          <h3 className="font-bold text-xl mb-2">Community</h3>
           <ul>
             <li>
               <a href="#">Twitter</a>
@@ -50,7 +50,7 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <h3 className="font-semibold">Company</h3>
+          <h3 className="font-bold text-xl mb-2">Company</h3>
           <ul>
             <li>
               <a href="#">About Us</a>
@@ -62,7 +62,7 @@ const Footer = () => {
               <a href="#">Legal</a>
             </li>
           </ul>
-          <h3 className="font-semibold mt-4">Contact Us</h3>
+          <h3 className="font-bold text-xl mb-2 mt-4">Contact Us</h3>
           <ul>
             <li>
               <a href="mailto:info@abstract.com">info@abstract.com</a>
